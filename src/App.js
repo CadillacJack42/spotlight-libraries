@@ -1,12 +1,14 @@
 import Graphs from './Graphs';
+import Lines from './Lines';
 import { pokedex, piekedex } from './pokeData';
-import { generateColumnNames, getHeight } from './data-utils';
+import { generateColumnNames, getHeight, evolution } from './data-utils';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryPie } from 'victory';
 import './App.css';
 
 function App() {
+  evolution(pokedex[0]);
   console.log(pokedex);
-  const columnKeys = generateColumnNames(pokedex[0]);
+  const columnKeys = generateColumnNames();
 
   const pokeData = pokedex.map((pokemon) => {
     return {
@@ -62,6 +64,7 @@ function App() {
           },
         }}
       />
+      <Lines poke={pokedex[0]} />
     </div>
   );
 }
