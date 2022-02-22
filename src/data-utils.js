@@ -14,3 +14,8 @@ export const generateColumnNames = (pokedex) => {
   console.log(columnNames);
   return columnNames;
 };
+
+export const getHeight = (pokemon) => {
+  const height = pokemon.height.split('').slice(0, -2).join('');
+  return height;
+};
