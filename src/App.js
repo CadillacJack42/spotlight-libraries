@@ -1,5 +1,6 @@
 import Graphs from './Graphs';
 import Lines from './Lines';
+import Compare from './Compare';
 import { pokedex, piekedex } from './pokeData';
 import { generateColumnNames, getHeight, evolution } from './data-utils';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryPie } from 'victory';
@@ -7,7 +8,6 @@ import './App.css';
 
 function App() {
   evolution(pokedex[0]);
-  console.log(pokedex);
   const columnKeys = generateColumnNames();
 
   const pokeData = pokedex.map((pokemon) => {
@@ -58,13 +58,15 @@ function App() {
         labelPosition={'centroid'}
         style={{
           labels: {
-            angle: -45,
             padding: 20,
             alignment: 'start',
           },
         }}
       />
       <Lines poke={pokedex[0]} />
+      <Lines poke={pokedex[3]} />
+      <Lines poke={pokedex[6]} />
+      <Compare />
     </div>
   );
 }

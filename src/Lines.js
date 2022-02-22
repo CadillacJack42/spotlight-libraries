@@ -3,9 +3,7 @@ import { VictoryLine, VictoryChart, VictoryAxis } from 'victory';
 import { evolution } from './data-utils';
 
 export default function Lines({ poke }) {
-  console.log(poke);
   const data = evolution(poke);
-  console.log(data);
   return (
     <div>
       <VictoryChart>
