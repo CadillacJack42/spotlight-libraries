@@ -1,6 +1,5 @@
 import Graphs from './Graphs';
 import Lines from './Lines';
-import Compare from './Compare';
 import { pokedex, piekedex } from './pokeData';
 import { generateColumnNames, getHeight, evolution } from './data-utils';
 import { VictoryBar, VictoryChart, VictoryAxis, VictoryPie } from 'victory';
@@ -66,7 +65,6 @@ function App() {
       <Lines poke={pokedex[0]} />
       <Lines poke={pokedex[3]} />
       <Lines poke={pokedex[6]} />
-      <Compare />
     </div>
   );
 }
