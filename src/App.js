@@ -25,6 +25,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Cadillac Jacks Graphs</h1>
       <Graphs columns={columnKeys} rows={pokedex} />
       <VictoryChart domainPadding={20}>
         <VictoryAxis
